@@ -1,5 +1,7 @@
 import { h } from 'preact';
 import { Router } from 'preact-router';
+import Sidebar from './sidebar/Sidebar'
+import Chat from './chat/Chat'
 
 import Header from './header';
 
@@ -9,12 +11,8 @@ import Profile from '../routes/profile';
 
 const App = () => (
 	<div id="app">
-		<Header />
-		<Router>
-			<Home path="/" />
-			<Profile path="/profile/" user="me" />
-			<Profile path="/profile/:user" />
-		</Router>
+		<Sidebar/>
+		<Chat/>
 	</div>
 )
 

@@ -1,5 +1,4 @@
 #!/bin/sh
 export PORT=8039
 npm run dev &
-sleep 2
-yarn electron 
+npm run el &
