@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 :root{
     --main-background-color: #000000;
     --foreground-color: #eeeeee;
@@ -6,6 +6,7 @@
     --default-chat-color: rgba(0,0,0, 10%);
     --default-message-color: #212225;
     --second-text-color: rgba(238,238,238, 50%);
+    --default-avatar-size: 80px;
 }
 
 body{
@@ -13,6 +14,7 @@ body{
     padding: 0;
     background-color: var(--main-background-color);
     color: var(--foreground-color);
+    font-family: 'Rubik', sans-serif;
 }
 
 #app {

@@ -1,7 +1,8 @@
+import ChatList from './ChatList'
 const SideBar = () => {
     return (
         <div>
-            Sidebar
+            <ChatList/>
         </div>
     )
 }

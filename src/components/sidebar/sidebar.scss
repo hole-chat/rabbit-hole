@@ -1,21 +1,47 @@
 .peer{
+    font-family: 'Rubik', sans-serif;
     display: flex;
-    &--info{
-        
-    }
+    background-color: var(--default-chat-color);
+    padding: 18px;
+    border-radius: 18px;
     &--avatar{
+        width: var(--default-avatar-size);
+        height: var(--default-avatar-size);
+        border-radius: 5px;
         
     }
     &--list{
-        
+        padding: 32px;
+        list-style: none;
     }
     &--title{
+        color: var(--foreground-color);
+        margin: 0;
+        padding: 0;
         
     }
     &--last{
         
+        color: var(--second-text-color);
+        margin: 0;
+        padding: 0;
+        font-size: 0.8em;
+        margin-top: 10px;
+        max-width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &--info{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:18px;
+        
     }
     &__selected{
-        
+        background-color: var(--selected-chat-color);
     }
 }
