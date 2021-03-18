@@ -1,7 +1,10 @@
+import ChatInput from './ChatInput'
+import Messages from './Messages'
 const Chat = () => {
     return (
-        <div>
-            chat
+        <div className="chat__wrap">
+            <Messages/>
+            <ChatInput/>
         </div>
     )
 }
