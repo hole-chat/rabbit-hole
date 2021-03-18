@@ -8,10 +8,9 @@
     "build": "preact build",
     "serve": "sirv build --port 8039 --cors --single",
     "dev": "preact watch",
-    "electron" : "electron .",
+    "electron": "./rabbit",
     "lint": "eslint src",
     "test": "jest",
-    "electron": "./rabbit",
     "el": "electron .",
     "electron-dev": "./rabbit-dev"
   },
@@ -28,7 +27,11 @@
     "eslint-config-preact": "^1.1.0",
     "jest": "^24.9.0",
     "jest-preset-preact": "^1.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "node-sass": "^5.0.0",
     "preact-cli": "^3.0.0",
+    "sass-loader": "^10.1.1",
     "sirv-cli": "1.0.3"
   },
   "dependencies": {

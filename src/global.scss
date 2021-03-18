@@ -1,0 +1,27 @@
+
+:root{
+    --main-background-color: #000000;
+    --foreground-color: #eeeeee;
+    --selected-chat-color: rgba(255,255,255, 10%);
+    --default-chat-color: rgba(0,0,0, 10%);
+    --default-message-color: #212225;
+    --second-text-color: rgba(238,238,238, 50%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background-color);
+    color: var(--foreground-color);
+}
+
+#app {
+    display: flex;
+    background-color: var(--main-background-color);
+    color: var(--foreground-color);
+}
+
+@import 'components/chat/chat';
+@import 'components/sidebar/sidebar';
+@import 'components/ui/ui';
+
