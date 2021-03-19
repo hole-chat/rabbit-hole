@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 :root{
-    --main-background-color: #000000;
+    --main-background-color: #22223f;
     --foreground-color: #eeeeee;
     --selected-chat-color: rgba(255,255,255, 10%);
     --default-chat-color: rgba(0,0,0, 10%);
-    --default-message-color: #212225;
+    --default-chat-color_hover: #00000050;
+    --default-message-color: #14141480;
     --second-text-color: rgba(238,238,238, 50%);
     --default-avatar-size: 80px;
+    --default-avatar-size__small: 30px;
+    --default-font:  'Rubik', sans-serif;
 }
 
 body{
@@ -21,6 +24,7 @@ body{
     display: flex;
     background-color: var(--main-background-color);
     color: var(--foreground-color);
+    height: 100vh;
 }
 
 @import 'components/chat/chat';
