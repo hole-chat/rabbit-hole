@@ -4,6 +4,10 @@
     background-color: var(--default-chat-color);
     padding: 18px;
     border-radius: 18px;
+    transition: 0.3s;
+    &:hover, &:focus{
+        background-color: var(--default-chat-color__hover) ;
+    }
     &--avatar{
         width: var(--default-avatar-size);
         height: var(--default-avatar-size);
@@ -13,6 +17,9 @@
     &--list{
         padding: 32px;
         list-style: none;
+        display: grid;
+        align-items: flex-start;
+        grid-gap: 10px 10px;
     }
     &--title{
         color: var(--foreground-color);
@@ -39,6 +46,7 @@
         flex-direction: column;
         justify-content: center;
         margin-left:18px;
+        translate: 0.3s;
         
     }
     &__selected{
