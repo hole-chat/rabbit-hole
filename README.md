@@ -1,5 +1,5 @@
-# rabbit_hole
-
+# Rabbit Hole
+A frontend for Hole chat
 ## CLI Commands
 
 ``` bash
