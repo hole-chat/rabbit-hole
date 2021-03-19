@@ -1,0 +1,17 @@
+.input {
+    display: flex;
+    background-color: var(--default-message-color);
+    width: 100%;
+    color: var(--foreground-color);
+    font-family: var(--default-font);
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    &__wrap{
+        display: flex;
+        width: 97%;    
+        margin: 10px;
+    }
+}
