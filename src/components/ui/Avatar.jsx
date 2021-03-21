@@ -1,7 +1,10 @@
 const Avatar = (props) => {
 	return (
 		<div
-			className="peer--avatar"
+			className={
+						"peer--avatar " +
+						(props.small ? "message--small" : "message--normal")
+					}
 			style={
 				!props.src
 					? {
