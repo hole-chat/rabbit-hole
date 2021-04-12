@@ -38,10 +38,8 @@
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
-    "react-use-websocket": "^2.5.0",
-    "socket.io-client": "^4.0.0",
-    "websocket": "^1.0.33",
-    "ws": "^5.2.2"
+    "react-context-devtool": "^2.0.3",
+    "react-use-websocket": "^2.5.0"
   },
   "jest": {
     "preset": "jest-preset-preact",
