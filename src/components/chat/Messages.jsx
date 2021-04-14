@@ -15,9 +15,10 @@ const Messages = (props) => {
         console.log("state has updated", messages)
 
     })
+    const curr_id = state.self.currentChat
 	return (
 		<ul className="message--list" ref={scroll}>
-		  {messages["id1"].map((message) => (
+		  {messages[curr_id].map((message) => (
 				<li
 					className={`message--wrap message--wrap__${
 						message.from_me ? "right" : "left"

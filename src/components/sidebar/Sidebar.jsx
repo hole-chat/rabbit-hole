@@ -3,6 +3,7 @@ const SideBar = () => {
 	return (
 		<div>
 			<ChatList />
+            <button>+</button>
 		</div>
 	);
 };

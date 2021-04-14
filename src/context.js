@@ -5,7 +5,7 @@ export const MessagesContext = createContext({})
 export const UsersContext = createContext({})
 
 export const mesDef = {
-    id1: [
+    "508bef17-cfe1-4931-8058-31ea8819ad49": [
       {
         from_me: true,
         message: "Welcome to freenet",
@@ -43,10 +43,10 @@ export const usDef = [
       avatar: "https://avatars.githubusercontent.com/u/80746081?s=200&v=4",
     },
   ]
-export const appDef = {currentChat: "id1", showAddNewUserPopUp: false, ws: undefined, chatBlock: undefined}
+export const appDef = {currentChat: "508bef17-cfe1-4931-8058-31ea8819ad49", showAddNewUserPopUp: false, ws: undefined, chatBlock: undefined}
 
 export const defaultState = {
-messages:{id1:[
+messages:{"508bef17-cfe1-4931-8058-31ea8819ad49":[
 		{
 			from_me: true,
 			message: "Welcome to freenet",

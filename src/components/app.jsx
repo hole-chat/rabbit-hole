@@ -1,6 +1,7 @@
 import { h } from "preact";
 import Sidebar from "./sidebar/Sidebar";
 import Chat from "./chat/Chat";
+import NewChatPopup from "./new-chat-popup/NewChatPopup"
 import { useEffect, useState } from "preact/hooks";
 import { AppContext, MessagesContext, UsersContext, appDef, mesDef, usDef } from '../context';
 
@@ -31,6 +32,7 @@ const App = () => {
           <div id="app">
             <Sidebar />
             <Chat />
+            <NewChatPopup/>
           </div>
         </UsersContext.Provider >
       </MessagesContext.Provider >
