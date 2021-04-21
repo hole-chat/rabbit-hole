@@ -20,7 +20,7 @@ const NewChatPopup = () => {
       }
     }
     catch (e) {
-       alert("Wrong formatted new chat info")
+       alert(`Wrong formatted new chat info ${e}` )
     }
   }
   return (

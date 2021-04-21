@@ -3,6 +3,7 @@ import Messages from "./Messages"
 import { MessagesContext } from "../../context"
 import {useEffect} from "preact/hooks"
 const Chat = () => {
+
   return (
     <MessagesContext.Consumer>
       { messages =>

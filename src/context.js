@@ -28,22 +28,8 @@ export const mesDef = {
       },
     ]
   }
-export const usDef = [
-    {
-      name: "Jack",
-      id: 1,
-      lastMessage: "How are you",
-      avatar: undefined,
-    },
-    {
-      name: "Jasy",
-      id: 2,
-      lastMessage:
-        "THIS IS YOUR LIFE. DOESNT GET ANY BETTER THAN THIS. YOU HAVE TO GIVE UP. YOU HAVE TO REALIZE WHAT SOMEDAAY YOU WILL DIE",
-      avatar: "https://avatars.githubusercontent.com/u/80746081?s=200&v=4",
-    },
-  ]
-export const appDef = {currentChat: "508bef17-cfe1-4931-8058-31ea8819ad49", showAddNewUserPopUp: false, ws: undefined, chatBlock: undefined}
+export const usDef = [ ]
+export const appDef = {ws: undefined,currentChat: "508bef17-cfe1-4931-8058-31ea8819ad49", showAddNewUserPopUp: false,  chatBlock: undefined, userConfig: {}}
 
 export const defaultState = {
 messages:{"508bef17-cfe1-4931-8058-31ea8819ad49":[
@@ -68,18 +54,4 @@ messages:{"508bef17-cfe1-4931-8058-31ea8819ad49":[
 			date: "20-20-20-30:20:10",
 		},
 ]},
-    userList: [
-		{
-			name: "Jack",
-			id: 1,
-			lastMessage: "How are you",
-			avatar: undefined,
-		},
-		{
-			name: "Jasy",
-			id: 2,
-			lastMessage:
-				"THIS IS YOUR LIFE. DOESNT GET ANY BETTER THAN THIS. YOU HAVE TO GIVE UP. YOU HAVE TO REALIZE WHAT SOMEDAAY YOU WILL DIE",
-			avatar: "https://avatars.githubusercontent.com/u/80746081?s=200&v=4",
-		},
-	]}
+    userList: []}

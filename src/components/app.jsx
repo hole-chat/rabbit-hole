@@ -4,6 +4,7 @@ import Chat from "./chat/Chat";
 import NewChatPopup from "./new-chat-popup/NewChatPopup"
 import { useEffect, useState } from "preact/hooks";
 import { AppContext, MessagesContext, UsersContext, appDef, mesDef, usDef } from '../context';
+import "preact/devtools"
 
 
 const App = () => {
@@ -17,13 +18,42 @@ const App = () => {
       const json = JSON.stringify({
         type: 'startApp'
       });
+
       socket.send(json);
+      socket.send(JSON.stringify({
+        type: 'loadUsers'
+      }))
       updateAppState({...appState, ws: socket})
     };
-    socket.onmessage = (json) => {
-      console.log(json)
+      socket.onmessage = (json) => {
+      try{
+      let j = JSON.parse(json.data);
+        console.log("json: ", j)
+      switch (j.type){
+          case "initialConfig":{
+            updateAppState({...appState, userConfig: {id: j.id, publicKey: j.public_key}, ws: socket});
+          }
+          break;
+          case "userList":{
+            console.log(j)
+            updateUserList(j.users);
+          }
+          break;
+        case "userAdded":{
+          console.log("old list", userList)
+          console.log("got new list", [...userList, j])
+          updateUserList([...userList, j]);
+          }
+          break;
+
+      }
+      } catch (e) {
+      }
     };
   }, []);
+  useEffect(() => {
+    console.log("CHANGED!", appState)
+  }, [appState])
 
   return (
     <AppContext.Provider value={{ self: appState, update: updateAppState }}>
