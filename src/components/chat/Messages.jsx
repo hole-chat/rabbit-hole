@@ -11,28 +11,28 @@ const Messages = (props) => {
     useEffect(() => {
         state.update({...state.self, chatBlock: scroll})
     }, [messages])
-    useEffect(() => {
-        console.log("state has updated", messages)
-
-    })
     const curr_id = state.self.currentChat
 	return (
-		<ul className="message--list" ref={scroll}>
-		  {!messages[curr_id] ?
+		<ul className="message--list" ref={scroll} id="chat-scroll">
+		  {messages[curr_id] == undefined ?
            <div>No Messages</div>
-           :messages[curr_id].map((message) => (
+           :messages[curr_id].map((message) => {
+               if(message != undefined)
+                   {return (
+
 				<li
 					className={`message--wrap message--wrap__${
-						message.from_me ? "right" : "left"
+						message.fromMe ? "right" : "left"
 					}`}
 				>
 					<Message
-						side={message.from_me}
+						side={message.fromMe}
 						message={message.message}
 						avatar={message.avatar}
 					/>
 				</li>
-			))}
+		           )}}
+                                 )}
 		</ul>
 
 	);

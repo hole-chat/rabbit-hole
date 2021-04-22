@@ -2,16 +2,17 @@ import { useState, useContext, useRef } from "preact/hooks";
 import { MessagesContext, AppContext } from "../../context";
 
 let fixScroll = (scrollBlock) => {
-	const blockHeight = scrollBlock.offsetHeight;
-	const scrollHeight = scrollBlock.scrollHeight;
-	const current = scrollBlock.scrollTop;
-	console.log(blockHeight, scrollHeight, current);
+    const scroll = document.getElementById("chat-scroll")
+	const blockHeight = scroll.offsetHeight;
+	const scrollHeight = scroll.scrollHeight;
+	const current = scroll.scrollTop;
 };
 
 const ChatInput = () => {
 	let [newMessage, newValue] = useState("");
 	const { self, update } = useContext(MessagesContext);
 	const state = useContext(AppContext).self;
+    const scroll = document.getElementById("chat-scroll")
 	let sendMessage = () => {
 		let id = state.currentChat;
 		update({
@@ -21,14 +22,13 @@ const ChatInput = () => {
 				{ fromMe: true, message: newMessage, date: new Date().toISOString() },
 			],
 		});
-		console.log(state.chatBlock.current.scrollHeight);
 		setTimeout(() => {
-			state.chatBlock.current.scrollTo(0, state.chatBlock.current.scrollHeight);
+		scroll.scrollTo(0, scroll.scrollHeight);
 		}, 10);
 		state.ws.send(
 			JSON.stringify({ type: "sendMessage", message: newMessage, userId: id })
 		);
-		console.log("sended");
+        console.log("seding", newMessage)
 	};
 
 	return (

@@ -4,7 +4,6 @@ const NewChatPopup = () => {
   const textarea = useRef();
   const [userName, updateUserName] = useState("");
   const ws = useContext(AppContext).self.ws
-  console.log("WS IS HERE", ws);
   const sendForm = () => {
     try{
     let parsed = JSON.parse(textarea.current.value)
@@ -34,7 +33,6 @@ const NewChatPopup = () => {
           value={userName}
           onKeyUp={(input) => {
             updateUserName(input.target.value);
-            console.log(input.target.value);
           }}
         />
       </div>

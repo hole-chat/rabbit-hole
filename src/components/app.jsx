@@ -51,9 +51,6 @@ const App = () => {
       }
     };
   }, []);
-  useEffect(() => {
-    console.log("CHANGED!", appState)
-  }, [appState])
 
   return (
     <AppContext.Provider value={{ self: appState, update: updateAppState }}>

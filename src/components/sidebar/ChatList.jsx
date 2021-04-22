@@ -6,9 +6,6 @@ import { UsersContext, AppContext } from '../../context'
 const ChatList = () => {
   const users = useContext(UsersContext)
   const state = useContext(AppContext)
-  useEffect(() => {
-    console.log("changed", state.self)
-  }, [state])
   // const [users, updateUsers] = useState([
   // 	{
   // 		name: "Jack",
