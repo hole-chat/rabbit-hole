@@ -18,7 +18,9 @@ const Messages = (props) => {
     const curr_id = state.self.currentChat
 	return (
 		<ul className="message--list" ref={scroll}>
-		  {messages[curr_id].map((message) => (
+		  {!messages[curr_id] ?
+           <div>No Messages</div>
+           :messages[curr_id].map((message) => (
 				<li
 					className={`message--wrap message--wrap__${
 						message.from_me ? "right" : "left"
