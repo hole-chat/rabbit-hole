@@ -5,7 +5,7 @@ export const MessagesContext = createContext({})
 export const UsersContext = createContext({})
 
 export const mesDef = {}
-export const usDef = [ ]
+export const usDef =[]
 export const appDef = {ws: undefined,currentChat: "508bef17-cfe1-4931-8058-31ea8819ad49", showAddNewUserPopUp: false,  chatBlock: undefined, userConfig: {}}
 
 export const defaultState = {

@@ -8,10 +8,21 @@ const Messages = (props) => {
     const scroll = useRef()
     const messages = props.messages.self;
     // Adding ul DOM element to AppContext
+    const curr_id = state.self.currentChat
     useEffect(() => {
         state.update({...state.self, chatBlock: scroll})
-    }, [messages])
-    const curr_id = state.self.currentChat
+        console.log(messages[curr_id])
+        if(messages[curr_id] == undefined) {
+            console.log("requesting new messages...")
+            //TODO infinite cycle, probably beacause I have clean up database
+            state.self.ws.send(JSON.stringify({
+                type: 'loadMessages',
+                userId: curr_id,
+                count: 10,
+                startIndex: 0,
+            }))
+        }
+    }, [messages, curr_id])
 	return (
 		<ul className="message--list" ref={scroll} id="chat-scroll">
 		  {messages[curr_id] == undefined ?
