@@ -3,6 +3,7 @@ import Sidebar from "./sidebar/Sidebar";
 import Chat from "./chat/Chat";
 import NewChatPopup from "./new-chat-popup/NewChatPopup";
 import { useEffect, useState } from "preact/hooks";
+import Errors from "./Errors"
 import {
 	AppContext,
 	MessagesContext,
@@ -96,6 +97,7 @@ const App = () => {
 					value={{ self: userList, update: updateUserList }}
 				>
 					<div id="app">
+                      	<Errors/>
 						<Sidebar />
 						<Chat />
 						<NewChatPopup />
