@@ -33,7 +33,7 @@ const ChatList = () => {
     state.update({...state.self, currentChat: id })
   }
   return (
-    <ul className="peer--list">
+    <ul className="peer--list" style={{display: users.self.length ? "block" : "none"}}>
       {users.self.map((user) => {
         return (
           <li key={user.id} className="peer peer__selected" onClick={() => changeChat(user.id)}>

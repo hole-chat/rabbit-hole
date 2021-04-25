@@ -1,12 +1,13 @@
 .chat {
     &__wrap{
-        padding: 0;
+        padding: 10px;
         margin: 0;
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
         flex-direction: column;
         width: 100%;
+
     }
     
 }
@@ -40,7 +41,8 @@
         display: grid;
         align-items: end;
         grid-gap: 10px 10px;
-        width: 96%;
+        width: 100%;
+        box-sizing: border-box;
 
     }
     &--wrap{

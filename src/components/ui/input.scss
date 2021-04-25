@@ -9,9 +9,31 @@
     border-radius: 12px;
     outline: none;
     border: none;
+
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
     &__wrap{
         display: flex;
-        width: 97%;    
-        margin: 10px;
+    width: 99%;
+    margin: 20px auto 0px;
+}
     }
+
+.input-button{
+display: flex;
+background-color: var(--default-message-color);
+color: var(--foreground-color);
+font-family: var(--default-font);
+font-size: 1em;
+padding: 10px 15px;
+border-radius: 12px;
+border-top-right-radius: 12px;
+border-bottom-right-radius: 12px;
+outline: none;
+border: none;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+&:hover, &:focus{
+    background-color: #ffffff30;
+}
 }

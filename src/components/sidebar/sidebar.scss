@@ -53,3 +53,28 @@
         background-color: var(--selected-chat-color);
     }
 }
+
+.sidebar{
+    &--wrapper{
+        min-width: 300px;
+        background: #00000050;
+    }
+}
+
+.add-chat-button{
+    width: 100%;
+    border: 0;
+    background: var(--default-chat-color);
+    color: var(--foreground-color);
+    font-family: var(--default-font);
+    font-size: 20px;
+    padding: 30px;
+    transition: 0.3s;
+    &:hover, &focus{
+        background-color: var(--default-chat-color_hover);
+    }
+    &:active{
+        transition: 0.1s;
+        opacity: 0.7;
+    }
+}

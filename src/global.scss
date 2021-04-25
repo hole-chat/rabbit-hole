@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 :root{
-    --main-background-color: #22223f;
+    --main-background-color: #20252D;
     --foreground-color: #eeeeee;
     --selected-chat-color: rgba(255,255,255, 10%);
     --default-chat-color: rgba(0,0,0, 10%);
@@ -10,7 +10,11 @@
     --default-avatar-size: 80px;
     --default-avatar-size__small: 30px;
     --default-font:  'Rubik', sans-serif;
+    --popup-background: #2F3744;
+    --placeholder-color: #22223f;
+    --button-color: #1d1d1d;
 }
+
 
 body{
     margin: 0;
@@ -30,4 +34,4 @@ body{
 @import 'components/chat/chat';
 @import 'components/sidebar/sidebar';
 @import 'components/ui/ui';
-
+@import 'components/new-chat-popup/popup';
