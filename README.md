@@ -1,7 +1,7 @@
 # Rabbit Hole
 A minimalistic frontend for Hole chat
 
-[[./example.png]]
+![screenshot](./example.png)
 
 
 ## CLI Commands
