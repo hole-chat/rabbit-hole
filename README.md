@@ -1,10 +1,16 @@
-# Rabbit Hole
-A minimalistic frontend for Hole chat
+# Rabbit Hole 🕳️
+A minimalistic frontend for Hole chat. 
+It's just a demonstration of how app working on top of [hole-core](https://github.com/hole-chat/core) may look like. 
 
-[[./example.png]]
+![screenshot](./example.png)
 
 
-## CLI Commands
+# Depend by platform is better ‼️
+The purpose of "hole project" is to **write independend frontend clients for each platform**, because, **app cannot be good for one particular platform if it's multiplatform**. 
+As a [hole-core](https://github.com/hole-chat/core) *is just a logic part*, which should be multiplatform, frontend shouldn't, And I encourage you to help and write "rabbit-hole for android" or "rabbit-hole-gtk", e.t.c. 
+
+
+## CLI Commands 💻
 ``` bash
 # install dependencies
 npm install
