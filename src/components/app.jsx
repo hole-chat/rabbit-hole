@@ -43,10 +43,11 @@ const App = () => {
 						{
 							updateAppState({
 								...appState,
-								userConfig: { id: j.id, publicKey: j.public_key },
+								userConfig: { id: j.id, publicKey: j.publicKey },
 								ws: socket,
 							});
 						}
+                        console.warn("YOUR SHARED CONFIG \n", JSON.stringify({id: j.id, insertKey: j.publicKey, signKey: "none"}))
 						break;
 					case "userList":
 						{
@@ -83,6 +84,19 @@ const App = () => {
 							});
 						}
 						break;
+
+                   case "Message": {
+                       updateMessages({
+								...messages,
+								[j.id]: [...messages[j.id], j],
+							})
+                       console.log("Adding new message", {
+								...messages,
+								[j.id]: [...messages[j.id], j],
+							});
+                       break;
+                   }
+
 				}
 			} catch (e) {}
 		};
